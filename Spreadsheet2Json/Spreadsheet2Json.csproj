@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <Version>$(VersionPrefix)</Version>
+    <Title>Spreadsheet to JSON</Title>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <FileVersion>0.0.0</FileVersion>
+    <AssemblyVersion>0.0.0</AssemblyVersion>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+
+	<Version>0.0.0</Version>
+	<Copyright>MASUDA Takashi</Copyright>
+	<ApplicationIcon>favicon.ico</ApplicationIcon>
+	<EnforceCodeStyleInBuild>False</EnforceCodeStyleInBuild>
+	<AssemblyName>spreadsheet2json</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.102.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+  </ItemGroup>
+
+</Project>
