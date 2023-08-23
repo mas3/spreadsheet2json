@@ -224,6 +224,7 @@ namespace Spreadsheet2Json
                 sheet["Visibility"] = worksheet.Visibility.ToString();
                 sheet["Active"] = worksheet.TabActive;
                 sheet["Selected"] = worksheet.TabSelected;
+                sheet["ZoomScale"] = worksheet.SheetView.ZoomScale;
             }
 
             if (IsIncludeCellData)

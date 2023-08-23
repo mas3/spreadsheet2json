@@ -304,5 +304,28 @@ namespace Spreadsheet2Json.tests
             sheet = sheets.FirstOrDefault(item => item?.AsObject()["Name"]?.ToString().Equals("veryhidden") ?? false);
             Assert.Null(sheet);
         }
+
+        [Fact]
+        public void SheetZoomScale()
+        {
+            SpreadsheetTranslator st = new(CultureInfo.CurrentCulture.Name)
+            {
+                InputFilePath = _fileSheetInformation,
+                IsIncludeSheetInformation = true
+            };
+
+            string jsonString = st.GetJsonString();
+            JsonNode? jsonNode = JsonNode.Parse(jsonString);
+            Assert.NotNull(jsonNode);
+
+            JsonArray? sheets = jsonNode["Workbook"]?.AsObject()["Sheets"]?.AsArray();
+            Assert.NotNull(sheets);
+
+            JsonNode? sheet;
+            sheet = sheets.FirstOrDefault(item => item?.AsObject()["Name"]?.ToString().Equals("zoom150") ?? false);
+            Assert.NotNull(sheet);
+            Assert.Equal(150, sheet["ZoomScale"]?.GetValue<int>());
+        }
+
     }
 }
