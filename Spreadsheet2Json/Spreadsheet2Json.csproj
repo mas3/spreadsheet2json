@@ -6,14 +6,13 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <EnableNETAnalyzers>True</EnableNETAnalyzers>
-    <Version>$(VersionPrefix)</Version>
     <Title>Spreadsheet to JSON</Title>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-    <FileVersion>0.0.0</FileVersion>
-    <AssemblyVersion>0.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
 
-	<Version>0.0.0</Version>
+	<Version>0.1.0</Version>
 	<Copyright>MASUDA Takashi</Copyright>
 	<ApplicationIcon>favicon.ico</ApplicationIcon>
 	<EnforceCodeStyleInBuild>False</EnforceCodeStyleInBuild>
